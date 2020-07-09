@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Jul 09 13:28:28 EDT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0173-349f-17f2-0000062dde28 
+on database directory memory:/Users/zefanzhang/Desktop/CS/personal-projects/e-learning-support/9a096644-b208-46d4-954f-a23fdd66aeb9 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@512ddf17 
+Loaded from file:/Users/zefanzhang/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=JetBrains s.r.o
+java.runtime.version=11.0.6+8-b520.43
+user.dir=/Users/zefanzhang/Desktop/CS/personal-projects/e-learning-support
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.15.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
