@@ -21,7 +21,7 @@ public class Register {
   @JsonIgnore
   private OfficeHour block;
 
-  @ManyToOne
+  @ManyToOne()
   @JsonIgnore
   private Student student;
 
@@ -56,4 +56,6 @@ public class Register {
   public void setStudent(Student student) {
     this.student = student;
   }
+
+
 }

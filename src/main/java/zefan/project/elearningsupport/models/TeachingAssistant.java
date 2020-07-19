@@ -15,7 +15,23 @@ public class TeachingAssistant extends User {
   private List<OfficeHour> blocks;
 
 
-  @ManyToOne
+  @ManyToOne()
   @JsonIgnore
   private Section section;
+
+  public List<OfficeHour> getBlocks() {
+    return blocks;
+  }
+
+  public void setBlocks(List<OfficeHour> blocks) {
+    this.blocks = blocks;
+  }
+
+  public Section getSection() {
+    return section;
+  }
+
+  public void setSection(Section section) {
+    this.section = section;
+  }
 }

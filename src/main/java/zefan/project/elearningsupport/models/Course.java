@@ -25,7 +25,7 @@ public class Course {
   private Professor professor;
 
   @OneToMany(mappedBy = "course")
-  private List<Course> courses;
+  private List<Section> sections;
 
   public int getId() {
     return id;
@@ -51,11 +51,11 @@ public class Course {
     this.professor = professor;
   }
 
-  public List<Course> getCourses() {
-    return courses;
+  public List<Section> getSections() {
+    return sections;
   }
 
-  public void setCourses(List<Course> courses) {
-    this.courses = courses;
+  public void setSections(List<Section> sections) {
+    this.sections = sections;
   }
 }

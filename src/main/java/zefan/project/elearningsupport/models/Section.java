@@ -24,7 +24,7 @@ public class Section {
   @JsonIgnore
   private Professor professor;
 
-  @ManyToOne
+  @ManyToOne()
   @JsonIgnore
   private Course course;
 

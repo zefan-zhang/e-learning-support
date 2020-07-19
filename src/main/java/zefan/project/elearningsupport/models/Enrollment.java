@@ -18,11 +18,11 @@ public class Enrollment {
   private String grade;
   private String feedback;
 
-  @ManyToOne
+  @ManyToOne()
   @JsonIgnore
   private Student student;
 
-  @ManyToOne
+  @ManyToOne()
   @JsonIgnore
   private Section section;
 
@@ -65,4 +65,6 @@ public class Enrollment {
   public void setSection(Section section) {
     this.section = section;
   }
+
+
 }

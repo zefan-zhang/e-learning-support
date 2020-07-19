@@ -31,7 +31,7 @@ public class User {
   private Date dob;
   @Enumerated(EnumType.STRING)
   private Status status;
-  @OneToMany
+  @OneToMany(mappedBy = "user")
   private List<Address> addresses;
 
   public int getId() {
