@@ -15,24 +15,25 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "officeHours")
-public class OfficeHour {
+@Table(name = "officeHourBlock")
+public class OfficeHourBlock {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
-
   private String title;
-
   private Time startTime;
-
   private int duration;
-
-  @OneToMany(mappedBy = "officeHour")
-  private List<OfficeHourBlock> officeHourBlockList;
 
   @ManyToOne()
   @JsonIgnore
   private TeachingAssistant TA;
+
+  @OneToMany(mappedBy = "block")
+  private List<Register> registers;
+
+  @ManyToOne()
+  @JsonIgnore
+  private OfficeHour officeHour;
 
   public int getId() {
     return id;
@@ -66,13 +67,6 @@ public class OfficeHour {
     this.duration = duration;
   }
 
-  public List<OfficeHourBlock> getOfficeHourBlockList() {
-    return officeHourBlockList;
-  }
-
-  public void setOfficeHourBlockList(List<OfficeHourBlock> officeHourBlockList) {
-    this.officeHourBlockList = officeHourBlockList;
-  }
 
   public TeachingAssistant getTA() {
     return TA;
@@ -80,5 +74,21 @@ public class OfficeHour {
 
   public void setTA(TeachingAssistant TA) {
     this.TA = TA;
+  }
+
+  public List<Register> getRegisters() {
+    return registers;
+  }
+
+  public void setRegisters(List<Register> registers) {
+    this.registers = registers;
+  }
+
+  public OfficeHour getOfficeHour() {
+    return officeHour;
+  }
+
+  public void setOfficeHour(OfficeHour officeHour) {
+    this.officeHour = officeHour;
   }
 }

@@ -12,18 +12,21 @@ import javax.persistence.OneToMany;
 public class TeachingAssistant extends User {
 
   @OneToMany(mappedBy = "TA")
-  private List<OfficeHour> blocks;
+  private List<OfficeHourBlock> blocks;
+
+  @OneToMany(mappedBy = "TA")
+  private List<OfficeHour> officeHours;
 
 
   @ManyToOne()
   @JsonIgnore
   private Section section;
 
-  public List<OfficeHour> getBlocks() {
+  public List<OfficeHourBlock> getBlocks() {
     return blocks;
   }
 
-  public void setBlocks(List<OfficeHour> blocks) {
+  public void setBlocks(List<OfficeHourBlock> blocks) {
     this.blocks = blocks;
   }
 
@@ -33,5 +36,13 @@ public class TeachingAssistant extends User {
 
   public void setSection(Section section) {
     this.section = section;
+  }
+
+  public List<OfficeHour> getOfficeHours() {
+    return officeHours;
+  }
+
+  public void setOfficeHours(List<OfficeHour> officeHours) {
+    this.officeHours = officeHours;
   }
 }

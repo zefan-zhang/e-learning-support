@@ -19,7 +19,7 @@ public class Register {
 
   @ManyToOne()
   @JsonIgnore
-  private OfficeHour block;
+  private OfficeHourBlock block;
 
   @ManyToOne()
   @JsonIgnore
@@ -41,11 +41,11 @@ public class Register {
     this.feedBack = feedBack;
   }
 
-  public OfficeHour getBlock() {
+  public OfficeHourBlock getBlock() {
     return block;
   }
 
-  public void setBlock(OfficeHour block) {
+  public void setBlock(OfficeHourBlock block) {
     this.block = block;
   }
 
