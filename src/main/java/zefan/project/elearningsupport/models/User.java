@@ -29,6 +29,18 @@ public class User {
   private String password;
   private String email;
   private Date dob;
+  @OneToMany(mappedBy = "user")
+  private List<Admin> admins;
+
+  @OneToMany(mappedBy = "user")
+  private List<Student> students;
+
+  @OneToMany(mappedBy = "user")
+  private List<Professor> professors;
+
+  @OneToMany(mappedBy = "user")
+  private List<TeachingAssistant> teachingAssistants;
+
   @Enumerated(EnumType.STRING)
   private Status status;
   @OneToMany(mappedBy = "user")
@@ -40,6 +52,38 @@ public class User {
 
   public void setId(int id) {
     this.id = id;
+  }
+
+  public List<Admin> getAdmins() {
+    return admins;
+  }
+
+  public void setAdmins(List<Admin> admins) {
+    this.admins = admins;
+  }
+
+  public List<Student> getStudents() {
+    return students;
+  }
+
+  public void setStudents(List<Student> students) {
+    this.students = students;
+  }
+
+  public List<Professor> getProfessors() {
+    return professors;
+  }
+
+  public void setProfessors(List<Professor> professors) {
+    this.professors = professors;
+  }
+
+  public List<TeachingAssistant> getTeachingAssistants() {
+    return teachingAssistants;
+  }
+
+  public void setTeachingAssistants(List<TeachingAssistant> teachingAssistants) {
+    this.teachingAssistants = teachingAssistants;
   }
 
   public RoleType getRole() {

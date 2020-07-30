@@ -21,7 +21,7 @@ public class UserController {
   @Autowired
   UserService userService;
 
-  @PostMapping("/register")
+  @PostMapping("/api/register")
   public User register(
           @RequestBody User user,
           HttpSession session) {
@@ -34,17 +34,17 @@ public class UserController {
     return null;
   }
 
-  @GetMapping("/profile")
+  @PostMapping("/api/profile")
   public User profile(HttpSession session) {
     return (User) session.getAttribute("currentUser");
   }
 
-  @PostMapping("/logout")
+  @PostMapping("/api/logout")
   public void logout(HttpSession session) {
     session.invalidate();
   }
 
-  @PostMapping("/login")
+  @PostMapping("/api/login")
   public User login(@RequestBody User user,
                     HttpSession session) {
     User currentUser = userService.findUserByCredentials(user.getUsername(), user.getPassword());
